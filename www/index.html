@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content=" worker-src blob:; child-src blob: gap:; img-src 'self' blob: data:; font-src 'self' blob: data:; default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' blob: data:; media-src * blob; script-src 'self' http://localhost:8000/ 'unsafe-inline' 'unsafe-eval';"
+		/>
+
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
+		<meta name="color-scheme" content="light dark" />
+
+		<link rel="icon" href="img/favicon2.png" />
+
+		<link rel="stylesheet" href="css/index.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/examples.css" />-->
+		<script src="js/jszip.min.js"></script>
+		<script src="js/epub.min.js"></script>
+
+		<title>EPUB Reader</title>
+	</head>
+	<body>
+		<div class="app">
+			<div id="navbar">
+				<div id="menu-btn">></div>
+				<img id="openOptions" src="img/options.png"></img>
+				<div id="closeOptions" hidden>×</div>
+			</div>
+			<div id="optionsContainer" class="options-container">
+				<div class="options-container-items">
+					<div class="option">
+						<label for="font-size">Font Size:&ensp;</label>
+						<input type="number" id="font-size" name="font-size" min="1" max="3" value="12" />
+					</div>
+					<div class="option">
+						<label for="line-spacing">Line Spacing:&ensp;</label>
+						<input type="number" id="line-spacing" name="line-spacing" min="1" max="3" value="12" />
+					</div>
+					<div class="option">
+						<label for="left-margin">Left Margin:&ensp;</label>
+						<input type="number" id="left-margin" name="left-margin" min="1" max="3" value="12" />
+					</div>
+					<div class="option">
+						<label for="right-margin">Right Margin:&ensp;</label>
+						<input type="number" id="right-margin" name="right-margin" min="1" max="3" value="12" />
+					</div>
+					<div class="option">
+						<label for="font-color">Font Color:&ensp;</label>
+						<input type="color" id="font-color" name="font-color" value="#000000" />
+					</div>
+					<div class="option">
+						<label for="background-color">Background Color:&ensp;</label>
+						<input type="color" id="background-color" name="background-color" value="#ffffff"/>
+					</div>
+					<div class="option">
+						<label for="font-name">Font Name:&ensp;</label>
+						<select id="font-name" name="font-name">
+							<option value="timesNewRoman">Times New Roman</option>
+							<option value="arial">Arial</option>
+							<option value="calibri">Calibri</option>
+						</select>
+					</div>
+					<br>
+					<button id="refreshBook" type="button">Refresh</button>
+				</div>
+			</div>
+			<div id="sidebar">
+				<div class="sidebar-header">
+					<div id="closeSidebar">×</div>
+				</div>
+				<div id="coversContainer1"></div>
+			</div>
+
+			<div id="content">
+				<div id="coversContainer2"></div>
+				<div id="bookPage" class="bookPage"><div id="viewer"></div>
+			</div>
+		</div>
+		<script src="cordova.js"></script>
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
