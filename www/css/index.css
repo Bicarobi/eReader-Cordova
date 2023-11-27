@@ -1,217 +1,232 @@
 * {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
 body {
-  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
-  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
-  -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
-  background-color: #ebebeb;
-  font-family: system-ui, -apple-system, -apple-system-font, "Segoe UI", "Roboto", sans-serif;
-  font-size: 12px;
-  height: 100vh;
-  margin: 0px;
-  padding: 0px;
-  /* Padding to avoid the "unsafe" areas behind notches in the screen */
-  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-  width: 100%;
+	-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+	-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+	background-color: #ebebeb;
+	font-family: system-ui, -apple-system, -apple-system-font, "Segoe UI", "Roboto", sans-serif;
+	font-size: 12px;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	/* Padding to avoid the "unsafe" areas behind notches in the screen */
+	padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+	width: 100%;
 }
 
 #coversContainer1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-gap: 15px;
-  padding: 15px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-gap: 15px;
+	padding: 15px;
 }
 
 #coversContainer2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-gap: 15px;
-  padding: 15px;
-  height: fit-content;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-gap: 15px;
+	padding: 15px;
+	height: fit-content;
 }
 
 .book-cover {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  /* margin: 10px; */
-  transition: box-shadow 0.3s;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	/* margin: 10px; */
+	transition: box-shadow 0.3s;
 }
 
 .book-cover:hover {
-  box-shadow: 0 0 11px rgb(33, 33, 33);
+	box-shadow: 0 0 11px rgb(33, 33, 33);
 }
 
 .options-container-header {
-  background-color: #292929;
-  padding: 7px;
-  margin-bottom: 20px;
+	background-color: #292929;
+	padding: 7px;
+	margin-bottom: 20px;
 }
 
 .options-container-items {
-  padding: 50px 15px 0px 15px;
+	padding: 50px 15px 0px 15px;
 }
 
 .options-container {
-  width: fit-content;
-  height: 330px;
-  background-color: #333;
-  position: fixed;
-  top: -330px;
-  z-index: 500;
-  right: 0;
+	width: fit-content;
+	height: 330px;
+	background-color: #333;
+	position: fixed;
+	top: -330px;
+	z-index: 500;
+	right: 0;
 }
 
 .option {
-  padding: 0 0 10px 0;
+	padding: 0 0 10px 0;
 }
 
 #closeOptions {
-  margin: 0 auto;
-  font-size: 16px;
-  cursor: pointer;
-  width: fit-content;
+	margin: 0 auto;
+	font-size: 16px;
+	cursor: pointer;
+	width: fit-content;
 }
 
 #navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  background-color: #292929;
-  transition: 0.3s;
-  z-index: 900;
-  display: flex;
-  justify-content: space-between;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 40px;
+	background-color: #292929;
+	transition: 0.3s;
+	z-index: 900;
+	display: flex;
+	justify-content: space-between;
 }
 
 #sidebar {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: -100vw;
-  background-color: #333;
-  color: white;
-  transition: 0.3s;
-  z-index: 1000;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	background-color: #333;
+	color: white;
+	transition: 0.3s;
+	z-index: 1000;
 }
 
 #sidebar img {
-  transition: 0.3s;
+	transition: 0.3s;
 }
 
 .sidebar-header {
-  width: 100vw;
-  height: 40px;
-  background-color: #292929;
+	width: 100vw;
+	height: 40px;
+	background-color: #292929;
 }
 
 #closeSidebar {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: right;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: right;
+
+	top: 12px;
+	color: white;
+	width: fit-content;
+	height: 16px;
 }
 
 #menu-btn {
-  position: absolute;
-  top: 0;
-  left: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: right;
+	position: absolute;
+	top: 0;
+	left: 15px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: right;
+
+	top: 8px;
+	color: white;
+	width: fit-content;
+	height: 22px;
 }
 
 #openOptions {
-  position: absolute;
-  cursor: pointer;
-  top: 13px;
-  right: 22px;
-  color: white;
-  width: fit-content;
-  height: 12px;
+	position: absolute;
+	cursor: pointer;
+	top: 13px;
+	right: 22px;
+	color: white;
+	width: fit-content;
+	height: 12px;
 }
 
 #closeOptions {
-  position: fixed;
-  top: 0;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
+	position: fixed;
+	top: 0;
+	right: 15px;
+	font-size: 24px;
+	cursor: pointer;
+
+	top: 12px;
+	color: white;
+	width: fit-content;
+	height: 16px;
 }
 
 #reloadBook {
-  height: 26px;
-  width: auto;
-  margin: auto 15px auto 0;
+	height: 26px;
+	width: auto;
+	margin: auto 15px auto 0;
 }
 
 .epub-container {
-  /* min-width: 320px; */
-  /* margin: 0 auto; */
-  /* position: relative; */
+	/* min-width: 320px; */
+	/* margin: 0 auto; */
+	/* position: relative; */
 }
 
 .epub-container .epub-view > iframe {
-  background: white;
-  box-shadow: 0 0 4px #ccc;
-  /*margin: 10px;
+	background: white;
+	box-shadow: 0 0 4px #ccc;
+	/*margin: 10px;
          padding: 20px;*/
 }
 
 #viewer {
-  width: 100vw;
-  height: 100vh;
-  /* overflow: auto; */
-  margin: 0 auto;
-  padding: 40px 0 0 0;
-  box-shadow: 0 0 11px rgb(33, 33, 33);
-  z-index: 0;
+	width: 100vw;
+	height: 100vh;
+	/* overflow: auto; */
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+	box-shadow: 0 0 11px rgb(33, 33, 33);
+	z-index: 0;
 }
 
 #content {
-  display: grid;
-  grid-template-columns: minmax(15%, 1fr) 70%;
+	display: grid;
+	grid-template-columns: minmax(15%, 1fr) 70%;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+	background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+	background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+	background: #555;
 }
 
 @media only screen and (min-width: 900px) {
-  #viewer {
-    min-width: 600px;
-    max-width: 50%;
-  }
-  #menu-btn,
-  #sidebar {
-    display: none;
-  }
+	#viewer {
+		min-width: 600px;
+		max-width: 50%;
+	}
+	#menu-btn,
+	#sidebar {
+		display: none;
+	}
 }
 @media only screen and (max-width: 899px) {
-  #coversContainer2 {
-    display: none;
-  }
+	#coversContainer2 {
+		display: none;
+	}
 }
 
 /*# sourceMappingURL=index.css.map */

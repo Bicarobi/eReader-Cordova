@@ -1,1 +1,1 @@
-{"plugins":["cordova-plugin-device","cordova-plugin-browsersync-gen2"]}
+{"plugins":["cordova-plugin-device","cordova-plugin-browsersync-gen2","cordova-plugin-splashscreen"]}

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
-    <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+    <name>Cordova eReader</name>
+    <description>eReader app made with Cordova</description>
+    <author email="cmrecki.robert@gmail.com" href="">
+        Robert Cmrecki
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -11,5 +11,26 @@
     <allow-intent href="https://*/*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="www/img/placeholder.png" />
+        <preference
+            name="SplashScreen"
+            value="screen" />
+        <preference
+            name="AutoHideSplashScreen"
+            value="true" />
+        <preference
+            name="SplashScreenDelay"
+            value="0" />
+
+        <feature name="SplashScreen" >
+            <param
+                name="android-package"
+                value="org.apache.cordova.splashscreen.SplashScreen" />
+            <param
+                name="onload"
+                value="true" />
+        </feature>
+        <icon src="www/img/icon.png" />
     </platform>
+    
 </widget>
